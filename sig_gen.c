@@ -1,8 +1,3 @@
-/*
- *	Beena Vision Systems Inc.
- *	Signal Generator Test Program - 4.24.2012
- */
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
