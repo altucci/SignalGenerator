@@ -1,0 +1,59 @@
+H5 - 82C55
+
+
+
+PORT ADDR	CHAR BIT	HEADER.PIN# - PIO NAME
+	
+
+[Port 0]
+0x0100		0x01		H5.10 - I00
+0x0100		0x02		H5.09 - I01
+0x0100		0x04		H5.08 - I02
+0x0100		0x08		H5.07 - I03
+0x0100		0x10		H5.06 - I04
+0x0100		0x20		H5.05 - I05
+0x0100		0x40		H5.02 - I06
+0x0100		0x80		H5.01 - I07
+
+
+[Port 1]
+0x0101		0x01		H5.26 - I10
+0x0101		0x02		H5.25 - I11
+0x0101		0x04		H5.24 - I12
+0x0101		0x08		H5.23 - I13
+0x0101		0x10		H5.22 - I14
+0x0101		0x20		H5.21 - I15
+0x0101		0x40		H5.20 - I16
+0x0101		0x80		H5.19 - I17
+
+
+[Port 2 Lower]
+0x0102		0x01		H5.18 - I20
+0x0102		0x02		H5.17 - I21
+0x0102		0x04		H5.16 - I22
+0x0102		0x08		H5.15 - I23
+
+[Port 2 Upper]
+0x0102		0x10		H5.14 - I24
+0x0102		0x20		H5.13 - I25
+0x0102		0x40		H5.12 - I26
+0x0102		0x80		H5.11 - I27
+
+
+
+0x0103 is the Command Register for the H5 header.  You must initialize it with the desired Control Word.  The particular Control Word assigned to the Command Register determines the I/O configuration of Port 0, Port 1, Port 2 Upper and Port 2 Lower.
+
+Control Words bit values (0 = Output, 1 = Input):
+	8		7		6		5			4				3		2			1
+	1		0		0  	    Port 0	    Port 2 Upper	0  	    Port 1 	    Port 2 Lower
+
+
+Since bits 8, 7 and 6 are all pre-set, the high char in the Control Word will always either be 8 or 9.
+There are 8 possibilities for the low char in the Control Word: 0, 1, 2, 3, 8, 9, A or B.
+
+If bit 4 (Port 2 Upper) is set to input (value of 1), then bit 1 (Port 2 Lower) is almost always also set to input.
+Similarly, if bit 4 (Port 2 Upper) is set to output (value of 0), then bit 1 (Port 2 Lower) is almost always also set to output.
+
+
+
+In order to operate ADC (Analogue to Digital conversion), I20 (pin 18), I21 (pin 17) and I22 (pin 16) must be output, and P11 must be input.

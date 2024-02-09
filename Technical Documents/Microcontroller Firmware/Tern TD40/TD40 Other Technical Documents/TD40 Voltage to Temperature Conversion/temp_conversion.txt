@@ -1,0 +1,4 @@
+Temperature = (-1.8176 * Voltage^3) + (14.9876 * Voltage^2) + (-58.5093 * Voltage) + 105.949
+
+Humidity = (36.637931 * Voltage) - 35.247844
+0.96 < Voltage < 3.69

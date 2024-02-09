@@ -1,0 +1,12 @@
+/Tde/s/v/c/k /LC:\PARADIGM\LIB;C:\TERN\186\LIB; +
+-v+ C:\PARADIGM\LIB\c0s.obj+
+-v+ sig_gen.obj+
+-v+ C:\PARADIGM\LIB\pdremote.obj
+sig_gen.rom
+sig_gen.MAP
+-v+ c:\tern\186\lib\ae.lib+
+-v+ C:\PARADIGM\LIB\noehs.lib+
+-v+ C:\PARADIGM\LIB\emu.lib+
+-v+ C:\PARADIGM\LIB\maths.lib+
+-v+ C:\PARADIGM\LIB\cs.lib
+

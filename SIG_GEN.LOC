@@ -1,0 +1,45 @@
+Input file: SIG_GEN.ROM
+Configuration file: C:\TERN\186\CONFIG\ACTF186.CFG
+Created by Paradigm LOCATE 6.00.114 on Thu Apr 26 12:22:51 2012
+Command line options: C:\Paradigm\bin\locate.exe -cc:\tern\186\config\actf186.cfg -d0 -D__PDREMOTE__ sig_gen.rom 
+
+Memory Address Map for Program SIG_GEN
+
+ Start     Stop      Length   Segment                Class               
+ 001000H   0013A1H   003A2H   _DATA                  DATA            
+ 0013A2H   0013A3H   00002H   _CVTSEG                DATA            
+ 0013A4H   0013A4H   00000H   _SCNSEG                DATA            
+ 0013B0H   003433H   02084H   _BSS                   BSS             
+ 003440H   003440H   00000H   _NVRAM                 NVRAM           
+ 003440H   00344FH   00010H   _EDATA                 EDATA           
+ 003450H   003450H   00000H   _NHEAP                 STACK           
+ 003450H   00384FH   00400H   _STACK                 STACK           
+ 003850H   00385FH   00010H   _ESTACK                STACK           
+ 003860H   003860H   00000H   _BFD                   FAR_DATA        
+ 003860H   00386FH   00010H   _EFD                   ENDFAR_DATA     
+ 003870H   003870H   00000H   _BFB                   FAR_BSS         
+ 003870H   00387FH   00010H   _EFB                   ENDFAR_BSS      
+ 003880H   003880H   00000H   _BFH                   FAR_HEAP        
+ 003880H   00388FH   00010H   _EFH                   ENDFAR_HEAP     
+ 010000H   012E2AH   02E2BH   _TEXT                  CODE            
+ 012E30H   013011H   001E2H   E87_PROG               CODE            
+ 013020H   01578BH   0276CH   EMU_PROG               CODE            
+ 015790H   0157A1H   00012H   _INIT_                 INITDATA        
+ 0157A2H   0157A2H   00000H   _INITEND_              INITDATA        
+ 0157B0H   0157B0H   00000H   _EXIT_                 EXITDATA        
+ 0157B0H   0157BFH   00010H   _EXITEND_              EXITDATA        
+ 0157C0H   0157C0H   00000H   _BFC                   FAR_CONST       
+ 0157C0H   0157CFH   00010H   _EFC                   ENDFAR_CONST    
+ 0157D0H   0157D0H   00000H   _RD                    ROMDATA         
+ 0157D0H   015B71H   003A2H   _DATA                  ROMDATA         
+ 015B72H   015B73H   00002H   _CVTSEG                ROMDATA         
+ 015B74H   015B74H   00000H   _SCNSEG                ROMDATA         
+ 015B80H   015B8FH   00010H   _ERD                   ENDROMDATA      
+ 015B90H   015B90H   00000H   _BRFD                  ROMFARDATA      
+ 015B90H   015B90H   00000H   _BFD                   ROMFARDATA      
+ 015B90H   015B9FH   00010H   _ERFD                  ENDROMFARDATA   
+
+Entry point:   1000:0000
+Initial stack: 0100:2450
+
+

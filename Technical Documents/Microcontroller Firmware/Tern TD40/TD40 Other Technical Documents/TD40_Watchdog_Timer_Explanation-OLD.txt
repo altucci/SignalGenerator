@@ -1,0 +1,39 @@
+As is proper in C program design, the contents of main() are almost trivial. The program first calls initialize_ports(), 
+then begins an endless for(;;) loop or endless while() loop <<ie. while(1)>>. Within this loop, the program: 
+
+
+Calls the library function hitwd(), which resets the microprocessor's watchdog timer. 
+(If the watchdog timer is not reset every so often, it will force a hard reset of the system. 
+ The purpose is to keep an intermittent program or hardware fault from locking up the system. 
+ Normally, this function is taken care of by the virtual driver, but it is called explicitly here).
+
+
+
+A watchdog timer (or computer operating properly (COP) timer) is a computer hardware or software timer that triggers a 
+system reset or other corrective action if the main program, due to some fault condition, such as a hang, neglects to 
+regularly service the watchdog (writing a "service pulse" to it, also referred to as "kicking the dog", “petting the dog”, 
+"feeding the watchdog"[1] or "waking the watchdog"). The intention is to bring the system back from the unresponsive state 
+into normal operation.
+
+Watchdog timers can be more complex, attempting to save debug information onto a persistent medium; i.e. information useful 
+for debugging the problem that caused the fault. In this case a second, simpler, watchdog timer ensures that if the first 
+watchdog timer does not report completion of its information saving task within a certain amount of time, the system will 
+reset with or without the information saved. The most common use of watchdog timers is in embedded systems, where this 
+specialized timer is often a built-in unit of a microcontroller.
+
+Even more complex watchdog timers may be used to run untrusted code in a sandbox.[2]
+
+Watchdog timers may also trigger fail-safe control systems to move into a safety state, such as turning off motors, high-voltage 
+electrical outputs, and other potentially dangerous subsystems until the fault is cleared.
+
+For example, a watchdog timer can be implemented with a x-bit counter in a system working with a clock signal of y MHz, 
+therefore, the system will shut down if the timer is not reset in a period of (2^x)/(y*(10^6)) seconds.
+
+For those embedded systems that can't be constantly watched by a human, watchdog timers may be the solution. For example, 
+most embedded systems need to be self-reliant, and it's not usually possible to wait for someone to reboot them if the software 
+hangs. Some embedded designs, such as space probes, are simply not accessible to human operators. If their software ever hangs, 
+such systems are permanently disabled. In cases similar to these, a watchdog timer can help in solving the problem.
+
+The watchdog timer is a chip external to the processor. However, it could also be included within the same chip as the CPU; 
+this is done in many microcontrollers. In either case, the watchdog timer is tied directly to the processor's reset signal. 
+Expansion card based watchdog timers exist and can be fitted to computers without an onboard watchdog.
